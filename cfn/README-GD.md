@@ -10,7 +10,7 @@ Amazon GuardDuty is a continuous security monitoring service that requires no cu
 
 # Before you begin
 
-To perform this procedure you must have administrative permissions in your AWS and Alert Logic Cloud Insight Essentials accounts. You must also download the Alert Logic custom CFT to your local machine from [the Alert Logic public github repository](https://github.com/alertlogic/cwe-collector/blob/master/cfn/guardduty.template).
+To perform this procedure you must have administrative permissions in your AWS and Alert Logic Cloud Insight Essentials accounts. 
 
 If you use the Windows system, this procedure requires PowerShell 3.0 or later. If you have an earlier version of PowerShell, you can [upgrade it](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell) to version 3.0 or later.
 
@@ -94,6 +94,8 @@ The Alert Logic CWE collector deploys to a single AWS region. To collect from
 multiple AWS regions, you must either install the collector in each target region or 
 set up GuardDuty collection across regions. For more information, see: [Setting up GuardDuty across
 regions and accounts](https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_accounts.html).
+
+**Note:** You may install only one collector an AWS region. If you try to deploy the template in a region with a collector installed, the deployment will not complete successfully.
 
 ### Use the Amazon console to deploy
 
